@@ -1,5 +1,5 @@
 # RELATED TOPICS:
-# string | dynamic programming
+# String | Dynamic programming
 
 class Solution:
     def longestPalindrome(self, s: str) -> str:
