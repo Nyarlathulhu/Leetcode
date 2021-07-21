@@ -56,3 +56,4 @@ class NumArray {
         return sum;
     }
 }
+
