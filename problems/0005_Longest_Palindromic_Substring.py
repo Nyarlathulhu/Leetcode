@@ -21,3 +21,4 @@ class Solution:
             if RL[i] > RL[maxcenter]:
                 maxcenter = i
         return s[maxcenter-RL[maxcenter]:maxcenter+RL[maxcenter]+1].replace('#','')
+    
