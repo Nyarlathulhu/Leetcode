@@ -1,4 +1,4 @@
 # Leetcode
-collects my solutions to problems
+This repo collects my solutions to problems I have dealt with.
 
-all solutions are acceptable
+All solutions are acceptable.
