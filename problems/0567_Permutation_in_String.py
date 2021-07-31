@@ -3,7 +3,7 @@
 
 class Solution:
     def checkInclusion(self, s1: str, s2: str) -> bool:
-        left = right = valid = start = 0
+        left = right = valid = 0
         window = {c: 0 for c in s1}
         count = {c: 0 for c in s1}
         for char in s1:
