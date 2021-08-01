@@ -7,10 +7,10 @@ class Solution:
         if k > len(prices) / 2:
             income_i_0 = 0
             income_i_1 = min_income
-            for i in range(len(prices)):
+            for price in prices:
                 temp = income_i_0
-                income_i_0 = max(income_i_0, income_i_1 + prices[i])
-                income_i_1 = max(income_i_1, temp - prices[i])
+                income_i_0 = max(income_i_0, income_i_1 + price)
+                income_i_1 = max(income_i_1, temp - price)
             return income_i_0
         
         income = {}
