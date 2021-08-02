@@ -24,6 +24,5 @@ class Solution:
                               max(rob_right[0], rob_right[1])
             return [not_robbed, robbed]
         
-        ans = isRobbed(root)
-        return max(ans[0], ans[1])
+        return max(isRobbed(root))
     
