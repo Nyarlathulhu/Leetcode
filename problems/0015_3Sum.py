@@ -9,6 +9,9 @@ class Solution:
         nums_sorted = sorted(nums)
         ans = []
         for fixed_pos in range(n - 2):
+            if fixed_pos > 0 and \
+               nums_sorted[fixed_pos] == nums_sorted[fixed_pos-1]:
+                continue
             fix = nums_sorted[fixed_pos]
             low = fixed_pos + 1
             high = n - 1
