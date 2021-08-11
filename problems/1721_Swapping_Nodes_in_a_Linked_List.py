@@ -57,11 +57,11 @@ class Solution:
         return head"""
         
         # swap values not nodes
-        s = []
+        nodes = []
         cur = head
         while cur:
-            s.append(cur)
+            nodes.append(cur)
             cur = cur.next
-        s[k-1].val, s[-k].val = s[-k].val,s[k-1].val
+        nodes[k-1].val, nodes[-k].val = nodes[-k].val, nodes[k-1].val
         return head
     
