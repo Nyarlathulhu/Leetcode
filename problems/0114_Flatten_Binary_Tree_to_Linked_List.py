@@ -12,17 +12,14 @@ class Solution:
         """
         Do not return anything, modify root in-place instead.
         """
-        def flattenChild(node):
-            if not node:
-                return
-            flattenChild(node.left)
-            flattenChild(node.right)
-            right = node.right
-            node.right = node.left
-            node.left = None
-            while node.right:
-                node = node.right
-            node.right = right
-        
-        flattenChild(root)
+        if not root:
+            return
+        self.flatten(root.left)
+        self.flatten(root.right)
+        right = root.right
+        root.right = root.left
+        root.left = None
+        while root.right:
+            root = root.right
+        root.right = right
         
