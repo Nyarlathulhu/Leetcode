@@ -20,15 +20,9 @@ class Solution:
             node.next = successor
             return last, successor
         
-        def reverse(node, m, n):
-            """
-            do as the problem requires
-            """
-            if m == 1:
-                first, _ = reverseFirstN(node, n)
-                return first
-            node.next = reverse(node.next, m - 1, n - 1)
-            return node
+        if left == 1:
+            first, _ = reverseFirstN(head, right)
+            return first
+        head.next = self.reverseBetween(head.next, left - 1, right - 1)
+        return head
         
-        return reverse(head, left, right)
-    
