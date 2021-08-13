@@ -9,15 +9,12 @@
 #         self.right = right
 class Solution:
     def invertTree(self, root: TreeNode) -> TreeNode:
-        def invert(node):
-            if not node:
-                return None
-            temp = node.left
-            node.left = node.right
-            node.right = temp
-            invert(node.left)
-            invert(node.right)
-            return node
+        if not root:
+            return None
+        temp = root.left
+        root.left = root.right
+        root.right = temp
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
         
-        return invert(root)
-    
