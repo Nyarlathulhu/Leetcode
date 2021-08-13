@@ -8,10 +8,11 @@
 #         self.next = next
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        """
-        # iteratively
         if not head:
             return None
+        
+        """
+        # iteratively
         pre = head
         cur = pre.next
         while cur:
@@ -25,15 +26,10 @@ class Solution:
         """
         
         # recursively
-        def reverse(node):
-            if not node:
-                return None
-            if not node.next:
-                return node
-            last = reverse(node.next)
-            node.next.next = node
-            node.next = None
-            return last
+        if not head.next:
+            return head
+        last = self.reverseList(head.next)
+        head.next.next = head
+        head.next = None
+        return last
         
-        return reverse(head)
-    
