@@ -21,15 +21,12 @@ class Solution:
                 cur = nxt
             return pre
         
-        def reverse(node, k):
-            a = b = node
-            for _ in range(k):
-                if b == None:
-                    return node
-                b = b.next
-            next_head = reverseInterval(a, b)
-            a.next = reverse(b, k)
-            return next_head
+        a = b = head
+        for _ in range(k):
+            if b == None:
+                return node
+            b = b.next
+        next_head = reverseInterval(a, b)
+        a.next = self.reverseKGroup(b, k)
+        return next_head
         
-        return reverse(head, k)
-    
