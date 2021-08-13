@@ -11,9 +11,9 @@ class Solution:
     def rob(self, root: TreeNode) -> int:
         def isRobbed(node):
             """
-                return a 2 length list,
-                list[0] is max amount if not rob this node,
-                list[1] is max amount if rob this node
+            return a 2 length list,
+            list[0] is max amount if not rob this node,
+            list[1] is max amount if rob this node
             """
             if not node:
                 return [0, 0]
