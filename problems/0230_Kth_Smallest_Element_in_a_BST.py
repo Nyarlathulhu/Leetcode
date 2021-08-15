@@ -1,5 +1,5 @@
 # RELATED TOPICS:
-# Tree | Depth-First Search | Breadth-First Search | Binary Tree
+# Tree | Depth-First Search | Binary Search Tree | Binary Tree
 
 # Definition for a binary tree node.
 # class TreeNode:
