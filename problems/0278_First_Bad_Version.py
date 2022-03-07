@@ -1,7 +1,6 @@
 # RELATED TOPICS:
 # Binary Search | Interactive
 
-
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         left = 1
@@ -13,3 +12,4 @@ class Solution:
             else:
                 left = mid + 1
         return left
+
