@@ -25,8 +25,6 @@ class Solution:
         while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
-        if fast:
-            slow = slow.next
         
         left = head
         right = reverse(slow)
